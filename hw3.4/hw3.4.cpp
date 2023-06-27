@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 
-enum Weekdays
+enum class Weekdays
 {
 	Monday = 1,
 	Tuesday,
@@ -15,13 +15,13 @@ int main()
 {
 	std::cout << "Numerical values of the days of the week:" << std::endl;
 	
-	std::cout << "Monday: " << int (Monday) << std::endl;
-	std::cout << "Tuesday: " << int (Tuesday) << std::endl;
-	std::cout << "Wednesday: " << int (Wednesday) << std::endl;
-	std::cout << "Thursday: " << int (Thursday) << std::endl;
-	std::cout << "Friday: " << int (Friday) << std::endl;
-	std::cout << "Saturday: " << int (Saturday) << std::endl;
-	std::cout << "Sunday: " << int (Sunday) << std::endl;
+	std::cout << "Monday: " << int (Weekdays::Monday) << std::endl;
+	std::cout << "Tuesday: " << int (Weekdays::Tuesday) << std::endl;
+	std::cout << "Wednesday: " << int (Weekdays::Wednesday) << std::endl;
+	std::cout << "Thursday: " << int (Weekdays::Thursday) << std::endl;
+	std::cout << "Friday: " << int (Weekdays::Friday) << std::endl;
+	std::cout << "Saturday: " << int (Weekdays::Saturday) << std::endl;
+	std::cout << "Sunday: " << int (Weekdays::Sunday) << std::endl;
 
 	int number;
 	std::cout << "Enter number: ";
