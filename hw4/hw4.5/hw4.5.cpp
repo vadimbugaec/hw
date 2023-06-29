@@ -6,7 +6,7 @@ int main()
 	std::cout << "Enter the radius of circle: ";
 	std::cin >> radius;
 
-	double p = 3.14;
+	const double p = 3.14;
 
 	double square = p * radius * radius;
 	double length = 2 * p * radius;
