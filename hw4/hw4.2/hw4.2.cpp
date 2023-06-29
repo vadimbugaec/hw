@@ -11,14 +11,14 @@ int main()
     std::cin >> num2;
     std::cout << "Enter third number: ";
     std::cin >> num3;
-
+    
     int sum = num1 + num2 + num3;
     std::cout << "Sum: " << sum << std::endl;
 
     int product = num1 * num2 * num3;
     std::cout << "Product: " << product << std::endl;
 
-    int average = sum / 3;
+    double average = double (sum) / 3;
     std::cout << "average: " << average << std::endl;
 
     bool compr = num1 > num2;
