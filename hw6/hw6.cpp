@@ -29,13 +29,11 @@ void SecondTask()
         std::cout << "Fibonacci number equal = 1" << std::endl;
         return;
     }
-    int i = 0;
-    while (i < number - 2)
+    for (int i = 0; i < number - 2; i++)
     {
         fib_sum = fib1 + fib2;
         fib1 = fib2;
         fib2 = fib_sum;
-        i += 1;
     }
     std::cout << "Fibonacci number equal = " << fib_sum << std::endl;
 
@@ -122,7 +120,7 @@ void FifthTask()
     {
         std::cout << "Enter any symbol: ";
         std::cin >> symbol;
-        if (symbol >= 97 && symbol <= 122)
+        if (symbol >= 'a' && symbol <= 'z')
         {
             putchar(toupper(symbol));
             std::cout << std::endl;
@@ -131,9 +129,9 @@ void FifthTask()
         {
             break;
         }
-        else if (symbol >= 48 && symbol <= 57)
+        else if (symbol >= '0' && symbol <= '9')
         {
-            sum += (symbol - 48);
+            sum += (symbol - '0');
             std::cout << sum << std::endl;
         }
         else
