@@ -19,15 +19,16 @@ void translateArray(int numbers[], int size)
 
 int main()
 {
-	int numbers[10];
+	const int MAXNUM = 10;
+	int numbers[MAXNUM];
 	cout << "Enter 10 numbers: " << endl;
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < MAXNUM; i++)
 	{
 		cin >> numbers[i];
 	}
-	translateArray(numbers, 10);
+	translateArray(numbers, MAXNUM);
 	cout << "\nProcessed numbers: ";
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < MAXNUM; i++)
 	{
 		cout << numbers[i] << " ";
 	}
