@@ -22,34 +22,24 @@ int main()
 		{
 			cout << arr2d[i][j] << " ";
 		}
-		//cout << endl;
 	}
 	cout << endl;
 
-	for (int i = rows - 1; i >= 0; i--) //13 14 15 16 12 11 10 9 5 6 7 8 4 3 2 1
+	for (int i = rows - 1; i >= 0; i--)
 	{
-	//	for (int j = col - 1; j >= 0; j--)
-	//	{
-	//	}
 		int j;
 		if (i % 2 == 1)
 		{
-			j = 0;			
+			for (int j = 0; j < col; j++)
+			{
+				cout << arr2d[i][j] << " ";
+			}
 		}
 		else
 		{
-			j = col - 1;
-		}
-		while (j < col && j >= 0)
-		{
-			cout << arr2d[i][j] << " ";
-			if (i % 2 == 1)
+			for (int j = col - 1; j >= 0; j--)
 			{
-				j++;
-			}
-			else
-			{
-				j--;
+				cout << arr2d[i][j] << " ";
 			}
 		}
 	}
