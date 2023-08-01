@@ -2,7 +2,10 @@
 
 using namespace std;
 
-bool find(int arr[][5], int toFind)
+	const int Rows = 3;
+	const int Columns = 5;
+
+bool find(int arr[][Columns], int toFind)
 {
 	const int Rows = 3;
 	const int Columns = 5;
@@ -20,8 +23,6 @@ bool find(int arr[][5], int toFind)
 
 int main()
 {
-	const int Rows = 3;
-	const int Columns = 5;
 	int arr2d[Rows][Columns] = {
 		{11, 12, 13, 14, 15},
 		{21, 22, 23, 24, 25},
