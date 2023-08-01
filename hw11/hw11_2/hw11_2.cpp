@@ -2,29 +2,6 @@
 
 using namespace std;
 
-//enum class SortingDirection {ascending, decending};
-//
-//bool isSorted(const int* arr)
-//{
-//	SortingDirection sorting;
-//	if (arr[0] < arr[1])
-//	{
-//		sorting = SortingDirection::decending;
-//	}
-//	else
-//	{
-//		sorting = SortingDirection::ascending;
-//	}
-//	return bool(sorting);
-//}
-//
-//int main()
-//{
-//	const int count = 10;
-//	int arr[count] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-//    cout << boolalpha << isSorted(arr);
-//}
-
 enum class SortingDirection { ascending, descending };
 
 bool isSorted(const int* arr, SortingDirection direction) 
