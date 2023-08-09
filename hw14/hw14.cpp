@@ -4,20 +4,22 @@
 
 using namespace std;
 
+const int nummarks = 4;
+
 struct Student
 {
 	const char* name;
-	int marks[4];
+	int marks[nummarks];
 };
 
 double avgmark(const Student& student)
 {
 	double sum = 0;
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < nummarks; i++)
 	{
 		sum += student.marks[i];
 	}
-	return sum / 4;
+	return sum / nummarks;
 }
 
 bool AvgSwap(const Student& student1, const Student& student2) {
@@ -44,12 +46,12 @@ const Student& BestStudent(Student students[], int size)
 	return students[0];
 }
 
-int TopStudents(Student students[], int size, double seventyfive) 
+int TopStudents(Student students[], int size, double thereshold) 
 {
 	int count = 0;
 	for (int i = 0; i < size; i++) 
 	{
-		if (avgmark(students[i]) > seventyfive) 
+		if (avgmark(students[i]) > thereshold) 
 		{
 			count++;
 		}
@@ -82,9 +84,9 @@ int main()
 	const Student& topStudent = BestStudent(students, studentcount);
 	cout << "Top Student: " << topStudent.name << " with an average mark of: " << avgmark(topStudent) << endl;
 
-	double seventyfive = 7.5;
-	int aboveAverageCount = TopStudents(students, studentcount, seventyfive);
-	cout << "\nNumber of students with an average mark above " << seventyfive << ": " << aboveAverageCount << endl;
+	const double thereshold = 7.5;
+	int aboveAverageCount = TopStudents(students, studentcount, thereshold);
+	cout << "\nNumber of students with an average mark above " << thereshold << ": " << aboveAverageCount << endl;
 
 
 }
