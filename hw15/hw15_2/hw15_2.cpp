@@ -109,13 +109,6 @@ public:
         }
         cout << endl;
     }
-    ~Team()
-    {
-        for (Player* p : players)
-        {
-            delete p;
-        }
-    }
 };
 
 int main()
