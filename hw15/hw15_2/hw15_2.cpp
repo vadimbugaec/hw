@@ -94,7 +94,6 @@ public:
             if (*it == p)
             {
                 players.erase(it);
-                delete p;
                 break;
             }
         }
