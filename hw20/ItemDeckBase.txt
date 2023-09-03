@@ -1,0 +1,6 @@
+UndeadWeapon; Holy Grenade;4
+ZombieWeapon; Holy sword;2
+UndeadWeapon; Stinky knife;2
+Weapon; The Sword of DOOM;5
+Weapon; The Spear of LIGHT;5
+GodWeapon; Kaya;3
