@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "mainmenu.h"
 #include "Player.h"
 #include "platform.h"
@@ -22,6 +23,13 @@ int main()
 {
     sf::RenderWindow window(sf::VideoMode(1920, 1080), "Epic Murzik run!");
     window.setFramerateLimit(165);
+
+    sf::Music music;
+
+    if (!music.openFromFile("catplatformer.wav")) 
+    {
+
+    }
 
     srand(time(NULL));
 
@@ -76,6 +84,9 @@ int main()
 
     Background background1("back.png", 0.35f, false);
     Background background2("back.png", 0.35f, true);
+
+    music.setLoop(true);
+    music.play();
 
     int gamestate = IsStartMenu;
     while (window.isOpen())
@@ -254,5 +265,6 @@ int main()
             window.display();
         }
     }
+    music.stop();
     return 0;
 }
